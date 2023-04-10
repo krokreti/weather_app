@@ -50,7 +50,17 @@ MyTextTheme get myTextTheme {
     ),
     titleMedium1: TextStyle(color: Colors.white, fontSize: 25),
     titleSmall1: TextStyle(color: Colors.white, fontSize: 18),
-    subtitleLarge: TextStyle(color: Colors.amber, fontSize: 30),
+    subtitleLarge: TextStyle(
+      color: Colors.amber,
+      fontSize: 30,
+      shadows: [
+        Shadow(
+          blurRadius: 1.0,
+          color: Colors.black54,
+          offset: Offset(2.0, 2.0),
+        ),
+      ],
+    ),
     subtitleMedium: TextStyle(color: Colors.amber, fontSize: 20),
     subtitleSmall: TextStyle(color: Colors.amber, fontSize: 20),
     goldLabelMini: TextStyle(color: Colors.amber, fontSize: 13),

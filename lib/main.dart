@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import './screen/home_screen.dart';
 import './screen/detailed_weather_screen.dart';
+import './screen/search_screen.dart';
 import './provider/weather_provider.dart';
 import './theme/my_text_theme.dart';
 
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         routes: {
           DetailedWeatherScreen.routeName: (context) =>
               const DetailedWeatherScreen(),
+          SearchScreen.routeName: (context) => const SearchScreen(),
         },
       ),
     );

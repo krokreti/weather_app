@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import '../widget/weather_card.dart';
 import '../widget/welcome_widget.dart';
 import '../provider/weather_provider.dart';
+import '../screen/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/';
@@ -21,7 +22,15 @@ class HomeScreen extends StatelessWidget {
         MediaQuery.of(context).size.height - statusBarHeight - appBarHeight;
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.cloudy_snowing),
+        // leading: const Icon(Icons.cloudy_snowing),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.of(context).pushNamed(SearchScreen.routeName);
+            },
+            icon: Icon(Icons.add),
+          )
+        ],
         title: const Text('Weather Now'),
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -31,7 +40,6 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: Theme.of(context).backgroundColor,
       body: FutureBuilder(
         future: _refreshWeather(context),
-        // Provider.of<WeatherProvider>(context, listen: false).fetchData(),
         builder: (context, snapshot) =>
             snapshot.connectionState == ConnectionState.waiting
                 ? const Center(
