@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyTextTheme extends TextTheme {
   final TextStyle titleLarge1;
@@ -32,15 +33,15 @@ class MyTextTheme extends TextTheme {
 }
 
 MyTextTheme get myTextTheme {
-  return const MyTextTheme(
-    labelLarge1: TextStyle(color: Colors.white, fontSize: 20),
-    labelMedium1: TextStyle(color: Colors.white, fontSize: 20),
-    labelSmall1: TextStyle(color: Colors.white, fontSize: 18),
-    titleLarge1: TextStyle(
+  return MyTextTheme(
+    labelLarge1: GoogleFonts.lato(color: Colors.white, fontSize: 20),
+    labelMedium1: const TextStyle(color: Colors.white, fontSize: 20),
+    labelSmall1: GoogleFonts.lato(color: Colors.white, fontSize: 18),
+    titleLarge1: GoogleFonts.signika(
       color: Colors.white,
       fontWeight: FontWeight.bold,
       fontSize: 70,
-      shadows: [
+      shadows: const [
         Shadow(
           blurRadius: 1.0,
           color: Colors.black54,
@@ -50,10 +51,10 @@ MyTextTheme get myTextTheme {
     ),
     titleMedium1: TextStyle(color: Colors.white, fontSize: 25),
     titleSmall1: TextStyle(color: Colors.white, fontSize: 18),
-    subtitleLarge: TextStyle(
+    subtitleLarge: GoogleFonts.publicSans(
       color: Colors.amber,
       fontSize: 30,
-      shadows: [
+      shadows: const [
         Shadow(
           blurRadius: 1.0,
           color: Colors.black54,

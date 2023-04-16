@@ -39,6 +39,7 @@ dependencies:
   provider: ^6.0.5
   intl: ^0.18.0
   palette_generator: ^0.3.3+2
+  google_fonts: ^4.0.3
 
 dev_dependencies:
   flutter_test:
