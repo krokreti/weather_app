@@ -49,8 +49,8 @@ MyTextTheme get myTextTheme {
         ),
       ],
     ),
-    titleMedium1: TextStyle(color: Colors.white, fontSize: 25),
-    titleSmall1: TextStyle(color: Colors.white, fontSize: 18),
+    titleMedium1: const TextStyle(color: Colors.white, fontSize: 25),
+    titleSmall1: const TextStyle(color: Colors.white, fontSize: 18),
     subtitleLarge: GoogleFonts.publicSans(
       color: Colors.amber,
       fontSize: 30,
@@ -62,11 +62,11 @@ MyTextTheme get myTextTheme {
         ),
       ],
     ),
-    subtitleMedium: TextStyle(color: Colors.amber, fontSize: 20),
-    subtitleSmall: TextStyle(color: Colors.amber, fontSize: 20),
-    goldLabelMini: TextStyle(color: Colors.amber, fontSize: 13),
-    goldLabelSmall: TextStyle(color: Colors.amber, fontSize: 18),
-    goldLabelMedium: TextStyle(color: Colors.amber, fontSize: 25),
-    goldLabelLarge: TextStyle(color: Colors.amber, fontSize: 30),
+    subtitleMedium: GoogleFonts.lato(color: Colors.amber, fontSize: 20),
+    subtitleSmall: const TextStyle(color: Colors.amber, fontSize: 20),
+    goldLabelMini: const TextStyle(color: Colors.amber, fontSize: 13),
+    goldLabelSmall: const TextStyle(color: Colors.amber, fontSize: 18),
+    goldLabelMedium: const TextStyle(color: Colors.amber, fontSize: 25),
+    goldLabelLarge: const TextStyle(color: Colors.amber, fontSize: 30),
   );
 }
