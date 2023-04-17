@@ -23,13 +23,16 @@ class WeatherBody extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(
-          width: 100,
-          height: 100,
-          child: FittedBox(
-            child: Image.network(
-              'https:$imageUrl',
-              fit: BoxFit.cover,
+        Hero(
+          tag: 'hero-image',
+          child: SizedBox(
+            width: 100,
+            height: 100,
+            child: FittedBox(
+              child: Image.network(
+                'https:$imageUrl',
+                fit: BoxFit.cover,
+              ),
             ),
           ),
         ),

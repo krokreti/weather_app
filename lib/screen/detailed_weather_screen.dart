@@ -44,13 +44,16 @@ class DetailedWeatherScreen extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
-              width: 200,
-              height: 200,
-              child: FittedBox(
-                child: Image.network(
-                  'https:${weather.conditionIcon}',
-                  fit: BoxFit.cover,
+            Hero(
+              tag: 'hero-image',
+              child: SizedBox(
+                width: 200,
+                height: 200,
+                child: FittedBox(
+                  child: Image.network(
+                    'https:${weather.conditionIcon}',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
