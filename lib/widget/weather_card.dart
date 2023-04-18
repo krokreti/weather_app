@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import './weather/weather_title.dart';
 import './weather/weather_body.dart';
 import './weather/weather_footer.dart';
+import './weather/weather_localization.dart';
 import '../screen/detailed_weather_screen.dart';
 
 class WeatherCard extends StatelessWidget {
@@ -55,12 +56,14 @@ class WeatherCard extends StatelessWidget {
                   child: WeatherBody(tempC: tempC, imageUrl: imageUrl),
                 ),
                 WeatherFooter(
-                  locationName: locationName,
-                  locationCountry: locationCountry,
                   wind: wind,
                   dailyChanceOfRain: dailyChanceOfRain,
                   humidity: humidity,
                 ),
+                WeatherLocalization(
+                  locationName: locationName,
+                  locationCountry: locationCountry,
+                )
               ],
             ),
           ),

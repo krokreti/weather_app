@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
+
 import '../provider/weather_provider.dart';
 import '../model/weather.dart';
 import '../theme/my_text_theme.dart';
+
+import '../widget/weather/weather_localization.dart';
+import '../widget/detailed_weather/detailed_image.dart';
 
 class DetailedWeatherScreen extends StatelessWidget {
   static const routeName = '/detailed-weather';
@@ -27,37 +30,41 @@ class DetailedWeatherScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            WeatherLocalization(
+                locationName: weather.locationName,
+                locationCountry: weather.locationCountry),
+            DetailedImage(
+                imageUrl: weather.conditionIcon,
+                conditionText: weather.conditionText),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(
-                  Icons.location_on,
-                  color: Colors.amber,
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: const LinearGradient(
+                      colors: [Colors.deepPurple, Colors.blueAccent],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                  child: Text('AAAAAAAAAAAAAAA'),
                 ),
-                Text(
-                  "${weather.locationName} -",
-                  style: myTextTheme.goldLabelSmall,
-                ),
-                Text(
-                  " ${weather.locationCountry}",
-                  style: myTextTheme.labelSmall1,
+                Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    gradient: const LinearGradient(
+                      colors: [Colors.deepPurple, Colors.blueAccent],
+                      begin: Alignment.bottomRight,
+                      end: Alignment.topLeft,
+                    ),
+                  ),
+                  child: Text('AAAAAAAAAAAAAAA'),
                 )
               ],
-            ),
-            Hero(
-              tag: 'hero-image',
-              child: SizedBox(
-                width: 200,
-                height: 200,
-                child: FittedBox(
-                  child: Image.network(
-                    'https:${weather.conditionIcon}',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-            ),
-            Text(weather.conditionText, style: myTextTheme.subtitleLarge),
+            )
           ],
         ),
       ),
